@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssignmentsComponent implements OnInit {
   title="My assignment application";
+  enabled=true;
   assignments = [{
       name : "One",
       dueDate: '2018-01-01',
