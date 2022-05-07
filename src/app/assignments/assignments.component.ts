@@ -12,7 +12,7 @@ export class AssignmentsComponent{
   enabled=true;
   name:string='';
   dueDate!: Date;
-  
+  selectedAssignment!: Assignment;
 
   assignments:Assignment[] = [{name:"one",
                               dueDate : new Date('2020-01-25'),
@@ -31,6 +31,9 @@ export class AssignmentsComponent{
     assignment.dueDate=this.dueDate;
     assignment.submitted=false;
     this.assignments.push(assignment);
+  }
+  setSelected(assignment:Assignment){
+      this.selectedAssignment=assignment
   }
  
 }
