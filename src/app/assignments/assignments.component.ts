@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { Assignment } from './assignment.model;
+import { Assignment } from './assignment.model';
 
 
 @Component({
@@ -11,18 +11,16 @@ export class AssignmentsComponent{
   title="My assignment application";
   enabled=true;
   name:string='';
-  getValue(val:string){
-    //console.warn(val)
-    this.name=val;
-  }
+  dueDate:Date | undefined;
+  
 
-  assignments = [{
+  assignments:Assignment[] = [{
       name : "One",
-      dueDate: '2018-01-01',
+      //dueDate: new Date('2018-01-01'),
       submitted : true
   },{
     name : "two",
-    dueDate: '2019-01-01',
+    //dueDate: new Date('2019-01-01'),
     submitted : false
   }
 ]
@@ -30,8 +28,12 @@ export class AssignmentsComponent{
 
   ngOnInit(): void {
   }
-  onSubmit(name:string){
-    console.log(name)
+  onSubmit(){
+    const assignment = new Assignment();
+    assignment.name = this.name;
+    //assignment.dueDate=this.dueDate;
+    assignment.submitted=false;
+    this.assignments.push(assignment);
   }
  
 }
