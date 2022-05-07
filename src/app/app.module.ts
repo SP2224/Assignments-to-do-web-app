@@ -9,6 +9,7 @@ import { AssignmentsComponent } from './assignments/assignments.component';
 import { SubmittedDirective } from './shared/submitted.directive';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
    MatButtonModule,
    MatInputModule,
    MatFormFieldModule,
+   FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

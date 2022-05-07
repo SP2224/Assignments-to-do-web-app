@@ -1,8 +1,18 @@
-<form ngForm #assignmentsForm>
+<form ngForm #assignmentsForm class="form">
+    <mat-form-field>
+      <input type="text" 
+            #box
+            [(ngModel)]="name"
+            name="name" />
+    </mat-form-field>
     <button mat-stroked-button 
             [disabled]="!enabled"
-            color="primary">add assignment</button>
+            (click) = "onSubmit(box.value)"
+            color="primary">Add Assignment</button>
+            
+            <p>Box value is : {{name}}</p>     
 </form>
+
 
 
 <div *ngFor="let assignment of assignments"

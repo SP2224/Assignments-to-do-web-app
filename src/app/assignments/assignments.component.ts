@@ -1,13 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+//import { Assignment } from './assignment.model;
+
 
 @Component({
   selector: 'app-assignments',
   templateUrl: './assignments.component.html',
   styleUrls: ['./assignments.component.css']
 })
-export class AssignmentsComponent implements OnInit {
+export class AssignmentsComponent{
   title="My assignment application";
   enabled=true;
+  name:string='';
+  getValue(val:string){
+    //console.warn(val)
+    this.name=val;
+  }
+
   assignments = [{
       name : "One",
       dueDate: '2018-01-01',
@@ -22,5 +30,8 @@ export class AssignmentsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onSubmit(name:string){
+    console.log(name)
+  }
+ 
 }
