@@ -12,6 +12,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { AssignmentDetailComponent } from './assignments/assignment-detail/assignment-detail.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     AssignmentsComponent,
     SubmittedDirective,
     SubmittedDirective,
+    AssignmentDetailComponent,
 
   ],
   imports: [
@@ -32,6 +35,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
    FormsModule,
    MatDatepickerModule,
    MatNativeDateModule,
+   MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

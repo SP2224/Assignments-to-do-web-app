@@ -11,18 +11,15 @@ export class AssignmentsComponent{
   title="My assignment application";
   enabled=true;
   name:string='';
-  dueDate:Date | undefined;
+  dueDate!: Date;
   
 
-  assignments:Assignment[] = [{
-      name : "One",
-      //dueDate: new Date('2018-01-01'),
-      submitted : true
-  },{
-    name : "two",
-    //dueDate: new Date('2019-01-01'),
-    submitted : false
-  }
+  assignments:Assignment[] = [{name:"one",
+                              dueDate : new Date('2020-01-25'),
+                              submitted:true},
+                              {name:"two",
+                              dueDate : new Date('2021-02-24'),
+                              submitted:false}
 ]
   constructor() { }
 
@@ -31,7 +28,7 @@ export class AssignmentsComponent{
   onSubmit(){
     const assignment = new Assignment();
     assignment.name = this.name;
-    //assignment.dueDate=this.dueDate;
+    assignment.dueDate=this.dueDate;
     assignment.submitted=false;
     this.assignments.push(assignment);
   }

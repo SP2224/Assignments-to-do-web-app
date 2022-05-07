@@ -2,6 +2,6 @@
 
 export class Assignment{
     name:string='';
-   // dueDate: Date='';
+    dueDate!: Date;
     submitted?: boolean;
 }

@@ -1,7 +1,7 @@
-.submitted{
+#submitted{
     color: brown;
 }
-.unsubmitted{
+#unsubmitted{
     color: pink;
 }
 .form{

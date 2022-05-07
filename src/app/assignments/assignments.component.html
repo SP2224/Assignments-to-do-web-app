@@ -3,9 +3,10 @@
       <input matInput
             #assignmentName
             [(ngModel)]="name"
-            name="name" />
+            name="name" placeholder="Enter the subject name"/>
     </mat-form-field>
     <mat-form-field>
+        
         <input matInput
                 [matDatepicker]="picker"
                 [(ngModel)]="dueDate"
@@ -28,9 +29,20 @@
 
 
 
-<div *ngFor="let assignment of assignments"
-    [ngClass]="{'submitted': assignment.submitted === true,'unsubmitted': assignment.submitted === false}"
-    >
-   <p *ngIf="assignment.submitted; else unsubmitted">Assignment {{assignment.name}} has been submitted</p> 
+<mat-list *ngFor="let assignment of assignments">
+
+    <h3 mat-subheader></h3>
+    <mat-list-item>
+        <p appSubmitted *ngIf="assignment.submitted; else unsubmitted">
+            Assignment {{assignment.name}} has been submitted!
+        </p>
+        <ng-template #unsubmitted>
+            Assignment {{assignment.name}} hasn't been submitted.
+        </ng-template>
+    </mat-list-item>
+    
+   
     <ng-template #unsubmitted>Assignment {{assignment.name}} hasnt been submitted</ng-template>
-</div>
+</mat-list>
+
+<app-assignment-detail></app-assignment-detail>
