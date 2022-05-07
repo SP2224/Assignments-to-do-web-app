@@ -12,8 +12,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { AssignmentDetailComponent } from './assignments/assignment-detail/assignment-detail.component';
 import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,6 @@ import {MatListModule} from '@angular/material/list';
     AssignmentsComponent,
     SubmittedDirective,
     SubmittedDirective,
-    AssignmentDetailComponent,
 
   ],
   imports: [
@@ -35,7 +35,9 @@ import {MatListModule} from '@angular/material/list';
    FormsModule,
    MatDatepickerModule,
    MatNativeDateModule,
-   MatListModule
+   MatListModule,
+   MatCardModule,
+   MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
