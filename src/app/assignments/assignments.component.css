@@ -1,11 +1,7 @@
-#submitted{
-    color: brown;
-}
-#unsubmitted{
-    color: pink;
-}
-.form{
+.container{
     display: flex;
     flex-direction: column;
-    margin: 5px;
+}
+.addBtn{
+    align-self: flex-end;
 }

@@ -1,8 +1,9 @@
 
 
-<main *ngIf="formVisible === false">
+<main class="container"   *ngIf="formVisible === false">
 
-<button mat-flat-button color="accent"
+<button     class="addBtn"
+            mat-flat-button color="accent"
             (click)="onAddBtnClick()">Add assignment</button>
 
 <mat-list *ngFor="let assignment of assignments">
