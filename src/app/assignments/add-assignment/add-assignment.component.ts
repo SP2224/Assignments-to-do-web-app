@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+//import { EventEmitter } from 'stream';
 import { Assignment } from '../assignment.model';
 @Component({
   selector: 'app-add-assignment',
@@ -10,7 +11,7 @@ export class AddAssignmentComponent implements OnInit {
   name:string='';
   dueDate!: Date;
   assignments: any;
-  
+  //@Output() newAssignment =new EventEmitter<Assignment>
 
   constructor() { }
 

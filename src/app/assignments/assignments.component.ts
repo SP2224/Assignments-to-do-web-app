@@ -26,10 +26,16 @@ export class AssignmentsComponent{
   ngOnInit(): void {
   }
   setSelected(assignment:Assignment){
-      this.selectedAssignment=assignment
+      this.selectedAssignment=assignment;
   }
   onAddBtnClick(){
     this.formVisible =true;
+   // this.selectedAssignment=assignment;
+  }
+  onNewAssignment(event: Assignment){
+    this.assignments.push(event);
+    this.formVisible=false;
+
   }
  
 }
