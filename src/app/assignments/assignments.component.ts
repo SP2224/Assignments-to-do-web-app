@@ -10,8 +10,8 @@ import { Assignment } from './assignment.model';
 export class AssignmentsComponent{
   title="My assignment application";
   enabled=true;
-  name:string='';
-  dueDate!: Date;
+  formVisible = false;
+  
   selectedAssignment!: Assignment;
 
   assignments:Assignment[] = [{name:"one",
@@ -25,15 +25,11 @@ export class AssignmentsComponent{
 
   ngOnInit(): void {
   }
-  onSubmit(){
-    const assignment = new Assignment();
-    assignment.name = this.name;
-    assignment.dueDate=this.dueDate;
-    assignment.submitted=false;
-    this.assignments.push(assignment);
-  }
   setSelected(assignment:Assignment){
       this.selectedAssignment=assignment
+  }
+  onAddBtnClick(){
+    this.formVisible =true;
   }
  
 }
