@@ -8,13 +8,13 @@
 
 <mat-list *ngFor="let assignment of assignments">
 
-    <h3 mat-subheader>{{assignment.dueDate | date}}</h3>
+    <h3  mat-subheader>{{assignment.dueDate | date}}</h3>
     <mat-list-item (click)="setSelected(assignment)">
         <p appSubmitted *ngIf="assignment.submitted; else unsubmitted">
-            Assignment {{assignment.name}} has been submitted!
+            Assignment {{assignment.name}} <b>--has been--</b>  submitted!
         </p>
-        <ng-template #unsubmitted>
-            Assignment {{assignment.name}} hasn't been submitted.
+        <ng-template class="unsub"  #unsubmitted>
+            Assignment {{assignment.name}}  <b> --hasn't been-- </b>  submitted.
         </ng-template>
         <mat-divider></mat-divider>
     </mat-list-item>

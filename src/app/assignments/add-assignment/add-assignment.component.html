@@ -1,4 +1,4 @@
-<form ngForm #assignmentsForm class="form">
+<form  class="container" ngForm #assignmentsForm class="form">
     <mat-form-field>
       <input matInput
             #assignmentName
@@ -22,7 +22,9 @@
             
             (click) = "onSubmit(); assignmentsForm.reset()"
             color="primary">Add Assignment</button>
+            <div class="valuebox">
+                <p><b><i>Box value is : {{name}}</i></b></p>     
+                <p><b><i>Due date value is: {{dueDate}}</i></b></p>
+            </div>
             
-            <p>Box value is : {{name}}</p>     
-            <p>Due date value is: {{dueDate}}</p>
 </form>

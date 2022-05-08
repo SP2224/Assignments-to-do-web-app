@@ -1,5 +1,28 @@
 .form{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
     display: flex;
     flex-direction: column;
-    margin: 5px;
+    border: 5px;
+    border-radius: 12px;
+    border-style:groove;
+    border-bottom: 5px;
+    border-color: black;
+    background-color: yellow;
+}
+.valuebox{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    border: 5px;
+    border-radius: 12px;
+    border-style:groove;
+    border-bottom: 5px;
+    border-color: black;
+    background-color: lightgreen;
 }
