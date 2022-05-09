@@ -17,6 +17,7 @@ import {MatListModule} from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AddAssignmentComponent } from './assignments/add-assignment/add-assignment.component';
+import { AssignmentsService } from './shared/assignments.service';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AddAssignmentComponent } from './assignments/add-assignment/add-assignm
     SubmittedDirective,
     SubmittedDirective,
     AssignmentDetailComponent,
-    AddAssignmentComponent
+    AddAssignmentComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,7 @@ import { AddAssignmentComponent } from './assignments/add-assignment/add-assignm
    MatCardModule,
    MatCheckboxModule
   ],
-  providers: [],
+  providers: [AssignmentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
