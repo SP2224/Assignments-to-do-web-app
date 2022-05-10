@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AssignmentsService } from '../shared/assignments.service';
 import { Assignment } from './assignment.model';
 
 
@@ -14,16 +15,17 @@ export class AssignmentsComponent{
   
   selectedAssignment!: Assignment;
 
-  assignments:Assignment[] = [{name:"one",
-                              dueDate : new Date('2020-01-25'),
-                              submitted:true},
-                              {name:"two",
-                              dueDate : new Date('2021-02-24'),
-                              submitted:false}
-]
-  constructor() { }
+  assignments!: Assignment[];
+
+  constructor(private assignmentService:AssignmentsService) { }
 
   ngOnInit(): void {
+    //this.assignments = this.assignmentService.getAssignments();
+    this.getAssignments();
+  }
+  getAssignments(){
+    this.assignmentService.getAssignments()
+      .subscribe(assignments => this.assignments = assignments);
   }
   setSelected(assignment:Assignment){
       this.selectedAssignment=assignment;
@@ -33,7 +35,7 @@ export class AssignmentsComponent{
     //this.selectedAssignment=assignment;
   }
   onNewAssignment(event: Assignment){
-    this.assignments.push(event);
+    this.assignmentService.addAssignments(event).subscribe(success => console.log(success))
     this.formVisible=false;
 
   }
