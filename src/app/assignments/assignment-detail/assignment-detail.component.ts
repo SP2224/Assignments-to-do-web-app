@@ -22,4 +22,8 @@ export class AssignmentDetailComponent implements OnInit {
     this.assignmentService.updateAssignments(this.passedAssignment)
     .subscribe((res: any) => console.log(res));
   }
+  onDelete(){
+    this.assignmentService.deleteAssignment(this.passedAssignment).subscribe(res=>console.log(res));
+    //this.passedAssignment = null;
+  }
 }

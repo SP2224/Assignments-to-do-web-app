@@ -34,4 +34,13 @@ updateAssignments(assignment: Assignment): Observable<string>{
  } );
  return of('assignment updated!');
 }
+deleteAssignment(deleteAssignment: Assignment): Observable<string>{
+  this.assignments.forEach((assignment,i)=>{
+    if(assignment === deleteAssignment){
+      this.assignments.splice(i,1);
+    }
+  
+  });
+  return of('assignment deleted!');
+}
 }

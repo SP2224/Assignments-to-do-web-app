@@ -19,7 +19,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AddAssignmentComponent } from './assignments/add-assignment/add-assignment.component';
 import { AssignmentsService } from './shared/assignments.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
