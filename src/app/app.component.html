@@ -3,6 +3,7 @@
     <title>
 
     </title>
+
   </head>
   <body>
     <div class="center">
@@ -10,7 +11,10 @@
       <button mat-mini-fab>😊</button>
       <button mat-mini-fab>😋</button>
       <div class="head1">
-        <h1><i><b>ASSIGNMENTS OF THE MONTH</b></i></h1>
+        <h1>
+          <a routerLink="/home"><i><b>{{title}}</b></i>
+          </a>
+          </h1>
       </div>
       <button mat-mini-fab>🤭</button>
       <button mat-mini-fab>😴</button>
@@ -21,6 +25,6 @@
     
 
     
-    <app-assignments>assignments worls </app-assignments>
+     <app-assignments></app-assignments>
   </body>
 </html>
