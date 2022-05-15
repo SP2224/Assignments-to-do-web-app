@@ -20,6 +20,12 @@ import { AddAssignmentComponent } from './assignments/add-assignment/add-assignm
 import { AssignmentsService } from './shared/assignments.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes:Routes = [
+  {path: '',component: AssignmentsComponent},
+  {path: 'home',component: AssignmentsComponent}
+]
 
 @NgModule({
   declarations: [
@@ -45,6 +51,7 @@ import { environment } from '../environments/environment';
    MatListModule,
    MatCardModule,
    MatCheckboxModule,
+   RouterModule.forRoot(routes),
    ServiceWorkerModule.register('ngsw-worker.js', {
      enabled: environment.production,
      // Register the ServiceWorker as soon as the application is stable
