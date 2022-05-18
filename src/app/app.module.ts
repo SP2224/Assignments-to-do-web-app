@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,10 +21,12 @@ import { AssignmentsService } from './shared/assignments.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RouterModule, Routes } from '@angular/router';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 const routes:Routes = [
   {path: '',component: AssignmentsComponent},
-  {path: 'home',component: AssignmentsComponent}
+  {path: 'home',component: AssignmentsComponent},
+  {path:'add',component: AddAssignmentComponent}
 ]
 
 @NgModule({
@@ -51,6 +53,7 @@ const routes:Routes = [
    MatListModule,
    MatCardModule,
    MatCheckboxModule,
+   MatToolbarModule,
    RouterModule.forRoot(routes),
    ServiceWorkerModule.register('ngsw-worker.js', {
      enabled: environment.production,

@@ -31,13 +31,13 @@ export class AssignmentsComponent{
       this.selectedAssignment=assignment;
   }
   onAddBtnClick(){
-    this.formVisible =true;
-    //this.selectedAssignment=assignment;
+    //this.formVisible =true;
+    this.selectedAssignment == null;
   }
-  onNewAssignment(event: Assignment){
-    this.assignmentService.addAssignments(event).subscribe(success => console.log(success))
-    this.formVisible=false;
+  //onNewAssignment(event: Assignment){
+    //this.assignmentService.addAssignments(event).subscribe(success => console.log(success))
+    //this.formVisible=false;
 
-  }
+  //}
  
 }

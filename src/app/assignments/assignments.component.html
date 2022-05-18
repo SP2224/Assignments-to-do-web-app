@@ -1,10 +1,16 @@
 
 
-<main class="container"   *ngIf="formVisible === false">
+<main class="container"   >
+<div class="addBtn">
 
-<button     class="addBtn"
+    <a routerLink ="/add">
+
+<button    
             mat-flat-button color="accent"
             (click)="onAddBtnClick()">Add assignment</button>
+        </a>
+
+        </div>
 
 <mat-list *ngFor="let assignment of assignments">
 
@@ -21,5 +27,7 @@
     
 </mat-list>
 </main>
+<!--
 <app-add-assignment (newAssignment)="onNewAssignment($event)" *ngIf="formVisible === true"></app-add-assignment>
+-->
 <app-assignment-detail [passedAssignment]="selectedAssignment"></app-assignment-detail>
